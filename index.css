@@ -4,7 +4,7 @@ body {
     font-weight: 500;
     font-style: normal;
     margin: 0;
-    background: #1C1C1C;
+    background: #1F2937;
     display: flex;
     flex-direction: column;
     padding: 115px 52px;
@@ -12,9 +12,88 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: "Karla", sans-serif;
+    font-weight: 900;
+    letter-spacing: -2.5%;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #D5D4D8;
+    margin-top: -15px;
+}
+
+button {
+    color: white;
+    background: #10B981;
+    padding: 12px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 250ms;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .highlight {
     color: #4ADF86;
+}
+
+.hero {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #2F3E53;
+
+}
+
+#generate-btn {
+    max-width: 285px;
+    margin-top: 35px;
+}
+#generate-btn:hover {
+    filter: drop-shadow(5px 5px 35px rgba(5, 67, 47, 0.3)) brightness(1.05);
+    text-shadow: 1px 1.5px 1px rgba(4, 119, 86, 0.8);
+    transition: 250ms;
+    border: 1px solid #A7F3D0;
+    border-radius: 7px;
+}
+#generate-btn:active {
+    filter: drop-shadow(5px 5px 35px rgba(5, 150, 105, 0.5)) brightness(1.05);
+    scale: 1.03;
+    rotate: 5deg;
+}
+
+.password-container {
+    padding: 35px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.password-wrapper {
+    width: 100%;
+    min-height: 20px;
+    padding: 20px;
+    display: flex;
+    color: #4ADF86;
+    justify-content: center;
+    background: #273549;
+    border-radius: 6px;
+    transition: 150ms;
+    border: 5px dashed transparent;
+}
+.password-wrapper:empty {
+    opacity: 20%;
+    transition: 250ms;
+}
+.password-wrapper:not(:empty) {
+    border: 0;
+    border-radius: 0;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2362FF94BA' stroke-width='6' stroke-dasharray='15%2c 20%2c 1' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+}
+.password-wrapper:hover {
+    text-shadow: 2px 2px 2px rgb(22, 33, 26);
 }

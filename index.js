@@ -7,18 +7,31 @@ let generateBtn = document.getElementById("generate-btn")
 let password1El = document.getElementById("password1-el")
 let password2El = document.getElementById("password2-el")
 
-function generatePassword() {
+generateBtn.addEventListener("click", function generatePassword() {
+    password1 = ""
+    password2 = ""
 
-    for (let i = 0; i < characters.length; i++) {
-        let randomIndex = Math.floor(Math.random * 15)
-        password1El.textContent =+ characters[randomIndex]
-    }
-    for (let i = 0; i < characters.length; i++) {
-        let randomIndex = Math.floor(Math.random * 15)
-        password2El.textContent =+ characters[randomIndex]
+    for (let i = 0; i < 16; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length)
+        password1 += characters[randomIndex]
+        password1El.textContent = password1
     }
 
+    for (let i = 0; i < 16; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length)
+        password2 += characters[randomIndex]
+        password2El.textContent = password2
+    }
+})
+
+function promptCopy1 () {
+    if (password1) {
+  window.prompt("[ Ctrl + C ] then [ ENTER ] to copy", password1);
+    }   
 }
 
-generateBtn.addEventListener("click", generatePassword())
-
+function promptCopy2 () {
+    if (password2) {
+  window.prompt("[ Ctrl + C ] then [ ENTER ] to copy", password2);
+    }
+}
