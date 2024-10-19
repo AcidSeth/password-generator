@@ -2,7 +2,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 let generateBtn = document.getElementById("generate-btn")
-let password1El = document.getElementyById("password1-el")
+let password1El = document.getElementById("password1-el")
 let password2El = document.getElementById("password2-el")
 
 function generatePassword() {
@@ -18,6 +18,9 @@ function generatePassword() {
         password2 =+ characters[randomIndex]
     }
 
+
+    console.log(password1)
+    console.log(password2)
     password1El.textContent(password1)
     password2El.textContent(password2)
 }
